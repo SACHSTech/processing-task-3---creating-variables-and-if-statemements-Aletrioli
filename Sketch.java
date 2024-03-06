@@ -22,17 +22,23 @@ public class Sketch extends PApplet {
     boolGravity = false;
     intHeight = 400;
     intWidth = 400;
+    
+    // create randomiezd values
     dblRandWidth = intWidth / 2 * myRand.nextDouble(1);
     dblRandHeight = intHeight / 4 * myRand.nextDouble(1);
     dblRandValue = myRand.nextDouble(1);
+    
+    // decide whether random addition will be negative or positve based of ~50/50 chances
     if (dblRandValue > 0.5){
       dblRandWidth = dblRandWidth * -1;
     }
     
+    // draw the screen
     size(intWidth, intHeight);
   }
 
   public void setup() {
+    // draw the background (redundant because using clear anyways)
     if(dblRandValue > 0.5){
       background(13, 46, 79);
     } else {
@@ -72,6 +78,8 @@ public class Sketch extends PApplet {
         e1.printStackTrace();
       }
     }
+
+    // if conditions met, stop falling
     if(dblRandHeight >= 40 || boolMouseClicked == true){
       boolGravity = false;
     }
