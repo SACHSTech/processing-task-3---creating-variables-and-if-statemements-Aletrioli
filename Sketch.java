@@ -52,6 +52,7 @@ public class Sketch extends PApplet {
     boolMouseClicked = true;
     dblRandWidth += mouseX - pmouseX;
     dblRandHeight += mouseY - pmouseY;
+    dblGravity = (mouseY - pmouseY)/4;
   }
 
   // when mouse is released, begin to fall
@@ -59,9 +60,6 @@ public class Sketch extends PApplet {
     if(boolMouseClicked == true){
       boolMouseClicked = false;
       boolGravity = true;
-      if(dblRandHeight < 40);{
-        dblGravity = -2.5;
-      }
     }
   }
 
