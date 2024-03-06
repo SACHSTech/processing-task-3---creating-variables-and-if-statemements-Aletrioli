@@ -12,12 +12,14 @@ public class Sketch extends PApplet {
   double dblRandHeight;
   double dblRandValue;
   Random myRand = new Random();
-  boolean boolMouseClicked = false;
+  boolean boolMouseClicked;
   double dblGravity;
-  boolean boolGravity = false;
+  boolean boolGravity;
 
   public void settings() {
-    // set dblRandValue of intHeight and intWidth variables
+    // set value of comical amount of variables
+    boolMouseClicked = false;
+    boolGravity = false;
     intHeight = 400;
     intWidth = 400;
     dblRandWidth = intWidth / 2 * myRand.nextDouble(1);
